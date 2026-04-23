@@ -28,7 +28,7 @@ spec:
             memory: {{ .Values.resources.limits.memory }}
         volumeMounts:
         - name: log-volume
-          mountPath: /var/log
+          mountPath: /var/log/app
       volumes:
       - name: log-volume
         persistentVolumeClaim:
