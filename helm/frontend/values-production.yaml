@@ -1,0 +1,4 @@
+replicaCount: 3
+ingress:
+  host: eks-project.com
+namespace: eks-project-production

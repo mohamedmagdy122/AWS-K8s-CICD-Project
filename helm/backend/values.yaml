@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: 741452525359.dkr.ecr.us-east-1.amazonaws.com/dotnet-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  host: eks-project.com
+  annotations:
+    kubernetes.io/ingress.class: nginx
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+storage:
+  size: 1Gi
+  storageClass: gp2
+
+namespace: eks-project-production
