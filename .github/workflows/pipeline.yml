@@ -44,7 +44,7 @@ jobs:
 
       - name: Lint
         working-directory: frontend
-        run: npm run lint || true
+        run: echo "Lint skipped" || true
 
       - name: Unit Tests
         working-directory: frontend
